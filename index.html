@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>DYNAMIC RANGE</title>
+    <style>
+        #content {
+            /*border: 5px solid black;*/
+            padding: 15px;
+        }
+        #inputRange {
+            width: 70%;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        happiness level: <br>
+        <!--HW - change ...if else... with ...switch case...-->
+        <input 
+           id="inputRange"
+           value="3"
+           type="range"
+           min="1"
+           max="5"
+
+           oninput="
+               let hapLev = inputRange.value
+               switch (hapLev) {
+                case '1': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-13-icon.png'/>`;
+                break
+                case '2': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-12-icon.png'/>`;
+                break
+                case '3': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-05-icon.png'/>`;
+                break
+                case '4': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-03-icon.png'/>`;
+                break
+                case '5': content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-02-icon.png'/>`;
+               }
+
+
+               /*
+                if(hapLev == 1) {
+                 content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-13-icon.png'/>`
+                } else if(hapLev == 2) {
+                   content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-12-icon.png'/>`
+                } else if(hapLev == 3) {
+                   content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-05-icon.png'/>`
+                } else if(hapLev == 4) {
+                   content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-03-icon.png'/>`
+                } else if(hapLev == 5) {
+                   content.innerHTML = `<img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-02-icon.png'/>`
+                } 
+            */
+            "
+        >
+    </label>
+    
+    <span id="content">
+        <img src='https://icons.iconarchive.com/icons/icontexto/emoticons/48/icontexto-emoticons-05-icon.png'/>
+    </span>
+
+    <script>
+        console.log(content)
+    </script>
+</body>
+</html>
